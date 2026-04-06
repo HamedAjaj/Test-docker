@@ -17,9 +17,9 @@ services:   # this is where we define our services (containers)
         env_file:
             - ./.env
         depends_on:
-           # - mongo
-            - postgres 
             - redis
+           # - mongo
+           # - postgres 
     # mongo:
     #     image: mongo    
     #     restart: always
