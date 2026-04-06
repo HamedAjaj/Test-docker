@@ -28,14 +28,14 @@ services:   # this is where we define our services (containers)
     #     environment:
     #         MONGO_INITDB_ROOT_USERNAME: root
     #         MONGO_INITDB_ROOT_PASSWORD: example
-    postgres:
-        image: postgres
-        restart: always
-        volumes:
-        - postgres-db:/var/lib/postgresql/data # path of postgres data inside container
-        environment:
-            POSTGRES_USER: root
-            POSTGRES_PASSWORD: example 
+    # # postgres:
+    #     image: postgres
+    #     restart: always
+    #     volumes:
+    #     - postgres-db:/var/lib/postgresql/data # path of postgres data inside container
+    #     environment:
+    #         POSTGRES_USER: root
+    #         POSTGRES_PASSWORD: example 
     redis:
         image: redis
         restart: always
