@@ -1,0 +1,21 @@
+#version: '3'
+services:
+    # nginx:
+    #     image: nginx:stable-alpine
+    #     volumes:
+    #     - ./templates:/etc/nginx/templates   
+    #     ports:
+    #     - "8080:80"
+    #     restart:  always
+   
+  node-app:
+    build:
+        - context: . 
+            # second way run based  condition in dockerfile
+            # args:
+            # - NODE_ENV:production 
+            # first way to run based on stage in dockerfile
+        - target: production
+    environment:
+        - NODE_ENV=production
+    command: npm start

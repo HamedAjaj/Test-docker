@@ -1,0 +1,23 @@
+#version: '3'
+services:
+    node-app:  
+        build: 
+            context: .
+            # second way run based  condition in dockerfile
+            # args:
+            # - NODE_ENV:development 
+            # first way to run based on stage in dockerfile
+            target: development
+        volumes:
+         - ./src:/app/src:ro 
+        environment:
+         - NODE_ENV:development 
+        command: npm run dev
+
+    # nginx:
+    #     image: nginx:stable-alpine
+    #     volumes:
+    #     - ./templates:/etc/nginx/templates   
+    #     ports:
+    #     - "8080:80"
+    #     restart: always
