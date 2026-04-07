@@ -11,6 +11,7 @@ services:   # this is where we define our services (containers)
     #     restart: always
     node-app:
         container_name: express-node-app-containers
+        image: hamedajaj906/test-docker
         build: . 
         ports:
             - "3000:3000"
