@@ -1,7 +1,7 @@
 const express = require('express');
 //const mongoose = require('mongoose');
 const redis  = require('redis');
-const  {Client} = require('pg');
+//const  {Client} = require('pg');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -56,12 +56,15 @@ const DB_Port = '5423'
 //const Db_Host = 'mongo' //'172.18.0.2' // can use mongo name instead of ipaddress if using docker-compose
 const Db_Host = 'postgres' //'172.18.0.2' // can use mongo name instead of ipaddress if using docker-compose
 //const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${Db_Host || 'localhost'}:${DB_Port || 27017}/`;
-const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${Db_Host || 'localhost'}:${DB_Port || 5423}/`;
 
+//const URI = `postgresdb://${DB_USER}:${DB_PASSWORD}@${Db_Host || 'localhost'}:${DB_Port || 5423}/`;
+
+///to connect to postgres
+/*
 const pgClient = new Client({connectionString: url});
 pgClient.connect().then(() => console.log('Connected to PostgreSQL'))
 .catch(err => console.error('Could not connect to PostgreSQL', err));
- 
+ */
 // mongoose.connect(URI).then(() => console.log('Connected to MongoDB'))
 //   .catch(err => console.error('Could not connect to MongoDB', err));
 
