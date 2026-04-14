@@ -10,11 +10,9 @@ services:   # this is where we define our services (containers)
     #     - "8080:80"
     #     restart: always
     node-app:
-        container_name: express-node-app-containers
         image: hamedajaj906/test-docker
         build: . 
-        ports:
-            - "3000:3000"
+        scale: 3
         env_file:
             - ./.env
         depends_on:
