@@ -11,8 +11,7 @@ services:   # this is where we define our services (containers)
     #     restart: always
     node-app:
         image: hamedajaj906/test-docker
-        build: . 
-        scale: 3
+        build: .  
         env_file:
             - ./.env
         depends_on:
