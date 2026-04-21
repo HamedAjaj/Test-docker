@@ -37,7 +37,7 @@ redisclient.connect();
 
 app.get('/', (req, res) => {
   redisclient.set('greeting', 'greetingssss!');
-  res.send('Hello, Hamed !, this is new version of cmd in AWS with Redis and NginX , get image By docker hub repo  with  WatchTowers and Docker wasrm ');
+  res.send('Hello, Hamed !, this is new version of cmd in AWS with Redis and NginX , get image By docker hub repo  with  WatchTowers and Docker wasrm v1 ');
 });
 
 
