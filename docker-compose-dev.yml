@@ -4,8 +4,8 @@ services:
         build: 
             context: .
             # second way run based  condition in dockerfile
-            # args:
-            # - NODE_ENV:development 
+            args:
+             - NODE_ENV:development 
             # first way to run based on stage in dockerfile
             target: development
         volumes:

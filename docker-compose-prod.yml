@@ -12,10 +12,10 @@ services:
     build:
         context: . 
             # second way run based  condition in dockerfile
-            # args:
-            # - NODE_ENV:production 
+        args:
+        - NODE_ENV:production 
             # first way to run based on stage in dockerfile
-        target: production
+        #target: production
     environment:
         - NODE_ENV=production
     command: npm start
